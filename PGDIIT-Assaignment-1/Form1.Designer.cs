@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.Cname = new System.Windows.Forms.TextBox();
             this.tDeposit = new System.Windows.Forms.Button();
@@ -38,16 +39,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Cadd = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Scadd = new System.Windows.Forms.Label();
+            this.Scmobile = new System.Windows.Forms.Label();
+            this.Scaccount = new System.Windows.Forms.Label();
+            this.Scname = new System.Windows.Forms.Label();
+            this.addCompany = new System.Windows.Forms.Button();
             this.Caccount = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Cmobile = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.addCompany = new System.Windows.Forms.Button();
-            this.Scname = new System.Windows.Forms.Label();
-            this.Scaccount = new System.Windows.Forms.Label();
-            this.Scmobile = new System.Windows.Forms.Label();
-            this.Scadd = new System.Windows.Forms.Label();
+            this.ComEdit = new System.Windows.Forms.Button();
+            this.transectionServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transectionServiceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -68,7 +74,7 @@
             // 
             // tDeposit
             // 
-            this.tDeposit.Location = new System.Drawing.Point(99, 188);
+            this.tDeposit.Location = new System.Drawing.Point(30, 155);
             this.tDeposit.Name = "tDeposit";
             this.tDeposit.Size = new System.Drawing.Size(75, 23);
             this.tDeposit.TabIndex = 2;
@@ -78,14 +84,14 @@
             // 
             // Tamount
             // 
-            this.Tamount.Location = new System.Drawing.Point(241, 177);
+            this.Tamount.Location = new System.Drawing.Point(132, 158);
             this.Tamount.Name = "Tamount";
             this.Tamount.Size = new System.Drawing.Size(100, 20);
             this.Tamount.TabIndex = 3;
             // 
             // tWithdraw
             // 
-            this.tWithdraw.Location = new System.Drawing.Point(396, 188);
+            this.tWithdraw.Location = new System.Drawing.Point(250, 158);
             this.tWithdraw.Name = "tWithdraw";
             this.tWithdraw.Size = new System.Drawing.Size(75, 23);
             this.tWithdraw.TabIndex = 4;
@@ -96,7 +102,7 @@
             // showAmount
             // 
             this.showAmount.AutoSize = true;
-            this.showAmount.Location = new System.Drawing.Point(201, 232);
+            this.showAmount.Location = new System.Drawing.Point(383, 165);
             this.showAmount.Name = "showAmount";
             this.showAmount.Size = new System.Drawing.Size(70, 13);
             this.showAmount.TabIndex = 5;
@@ -104,7 +110,7 @@
             // 
             // exportAmount
             // 
-            this.exportAmount.Location = new System.Drawing.Point(99, 227);
+            this.exportAmount.Location = new System.Drawing.Point(34, 217);
             this.exportAmount.Name = "exportAmount";
             this.exportAmount.Size = new System.Drawing.Size(75, 23);
             this.exportAmount.TabIndex = 6;
@@ -131,6 +137,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ComEdit);
             this.panel1.Controls.Add(this.Scadd);
             this.panel1.Controls.Add(this.Scmobile);
             this.panel1.Controls.Add(this.Scaccount);
@@ -146,8 +153,54 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(24, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(744, 134);
+            this.panel1.Size = new System.Drawing.Size(764, 134);
             this.panel1.TabIndex = 9;
+            // 
+            // Scadd
+            // 
+            this.Scadd.AutoSize = true;
+            this.Scadd.Location = new System.Drawing.Point(247, 110);
+            this.Scadd.Name = "Scadd";
+            this.Scadd.Size = new System.Drawing.Size(35, 13);
+            this.Scadd.TabIndex = 19;
+            this.Scadd.Text = "label9";
+            // 
+            // Scmobile
+            // 
+            this.Scmobile.AutoSize = true;
+            this.Scmobile.Location = new System.Drawing.Point(444, 110);
+            this.Scmobile.Name = "Scmobile";
+            this.Scmobile.Size = new System.Drawing.Size(35, 13);
+            this.Scmobile.TabIndex = 18;
+            this.Scmobile.Text = "label8";
+            // 
+            // Scaccount
+            // 
+            this.Scaccount.AutoSize = true;
+            this.Scaccount.Location = new System.Drawing.Point(636, 110);
+            this.Scaccount.Name = "Scaccount";
+            this.Scaccount.Size = new System.Drawing.Size(35, 13);
+            this.Scaccount.TabIndex = 17;
+            this.Scaccount.Text = "label7";
+            // 
+            // Scname
+            // 
+            this.Scname.AutoSize = true;
+            this.Scname.Location = new System.Drawing.Point(50, 110);
+            this.Scname.Name = "Scname";
+            this.Scname.Size = new System.Drawing.Size(35, 13);
+            this.Scname.TabIndex = 15;
+            this.Scname.Text = "label5";
+            // 
+            // addCompany
+            // 
+            this.addCompany.Location = new System.Drawing.Point(172, 65);
+            this.addCompany.Name = "addCompany";
+            this.addCompany.Size = new System.Drawing.Size(222, 23);
+            this.addCompany.TabIndex = 14;
+            this.addCompany.Text = "Add Company";
+            this.addCompany.UseVisualStyleBackColor = true;
+            this.addCompany.Click += new System.EventHandler(this.addCompany_Click);
             // 
             // Caccount
             // 
@@ -181,57 +234,34 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Company Mobile Number :";
             // 
-            // addCompany
+            // ComEdit
             // 
-            this.addCompany.Location = new System.Drawing.Point(172, 65);
-            this.addCompany.Name = "addCompany";
-            this.addCompany.Size = new System.Drawing.Size(222, 23);
-            this.addCompany.TabIndex = 14;
-            this.addCompany.Text = "Add Company";
-            this.addCompany.UseVisualStyleBackColor = true;
-            this.addCompany.Click += new System.EventHandler(this.addCompany_Click);
+            this.ComEdit.Location = new System.Drawing.Point(400, 65);
+            this.ComEdit.Name = "ComEdit";
+            this.ComEdit.Size = new System.Drawing.Size(222, 23);
+            this.ComEdit.TabIndex = 20;
+            this.ComEdit.Text = "Edit Company";
+            this.ComEdit.UseVisualStyleBackColor = true;
+            this.ComEdit.Click += new System.EventHandler(this.ComEdit_Click);
             // 
-            // Scname
+            // transectionServiceBindingSource
             // 
-            this.Scname.AutoSize = true;
-            this.Scname.Location = new System.Drawing.Point(50, 110);
-            this.Scname.Name = "Scname";
-            this.Scname.Size = new System.Drawing.Size(35, 13);
-            this.Scname.TabIndex = 15;
-            this.Scname.Text = "label5";
+            this.transectionServiceBindingSource.DataSource = typeof(PGDIIT_Assaignment_1.TransectionService);
             // 
-            // Scaccount
+            // dataGridView1
             // 
-            this.Scaccount.AutoSize = true;
-            this.Scaccount.Location = new System.Drawing.Point(636, 110);
-            this.Scaccount.Name = "Scaccount";
-            this.Scaccount.Size = new System.Drawing.Size(35, 13);
-            this.Scaccount.TabIndex = 17;
-            this.Scaccount.Text = "label7";
-            // 
-            // Scmobile
-            // 
-            this.Scmobile.AutoSize = true;
-            this.Scmobile.Location = new System.Drawing.Point(444, 110);
-            this.Scmobile.Name = "Scmobile";
-            this.Scmobile.Size = new System.Drawing.Size(35, 13);
-            this.Scmobile.TabIndex = 18;
-            this.Scmobile.Text = "label8";
-            // 
-            // Scadd
-            // 
-            this.Scadd.AutoSize = true;
-            this.Scadd.Location = new System.Drawing.Point(247, 110);
-            this.Scadd.Name = "Scadd";
-            this.Scadd.Size = new System.Drawing.Size(35, 13);
-            this.Scadd.TabIndex = 19;
-            this.Scadd.Text = "label9";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(30, 256);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(735, 150);
+            this.dataGridView1.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 324);
+            this.ClientSize = new System.Drawing.Size(800, 448);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.exportAmount);
             this.Controls.Add(this.showAmount);
@@ -242,6 +272,8 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transectionServiceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,6 +300,9 @@
         private System.Windows.Forms.Label Scaccount;
         private System.Windows.Forms.Label Scname;
         private System.Windows.Forms.Button addCompany;
+        private System.Windows.Forms.Button ComEdit;
+        private System.Windows.Forms.BindingSource transectionServiceBindingSource;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
